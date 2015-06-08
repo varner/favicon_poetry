@@ -1,0 +1,23 @@
+{
+  "name": "favicon poetry",
+  "description": "yes",
+  "version": "0.9",
+  "manifest_version": 2,
+  "permissions": ["tabs", "windows"],
+  "content_scripts": [{
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/jquery.js", "js/favicon.js"]
+  }],
+  "web_accessible_resources": [
+    "resources/*"
+  ],
+  "icons": { "16": "16.png",
+           "48": "48.png",
+          "128": "128.png" 
+  },
+  "browser_action": {
+    "default_icon": "16.png", 
+    "default_title": "favicon poetry",
+    "default_popup": "popup.html"
+  }
+}
